@@ -42,6 +42,14 @@
         .text-left {
             text-align: left !important;
         }
+        
+        .login-page .main-footer {
+            background: #d2d6de;
+            padding: 15px;
+            color: #444;
+            border-top: 1px solid #d2d6de;
+            margin-left: 0px;
+        }
     </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -109,11 +117,11 @@
       <!-- /.content-wrapper -->
 
       <footer class="main-footer">
-        {{-- @if (config('backpack.base.show_powered_by'))
+        @if (config('backpack.base.show_powered_by'))
             <div class="pull-right hidden-xs">
               {{ trans('backpack::base.powered_by') }} <a target="_blank" href="http://backpackforlaravel.com?ref=panel_footer_link">Backpack for Laravel</a>
             </div>
-        @endif --}}
+        @endif
         {{ trans('backpack::base.handcrafted_by') }} <a target="_blank" href="{{ config('backpack.base.developer_link') }}">{{ config('backpack.base.developer_name') }}</a>.
       </footer>
     </div>
@@ -182,6 +190,20 @@
         });
     @endif
         @yield('custom_scripts')
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="main-footer">
+                        @if (config('backpack.base.show_powered_by'))
+                            <div class="pull-right hidden-xs">
+                            {{ trans('backpack::base.powered_by') }} <a target="_blank" href="http://backpackforlaravel.com?ref=panel_footer_link">Backpack for Laravel</a>
+                            </div>
+                        @endif
+                        {{ trans('backpack::base.handcrafted_by') }} <a target="_blank" href="{{ config('backpack.base.developer_link') }}">{{ config('backpack.base.developer_name') }}</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
     </script>
 
     @include('backpack::inc.alerts')
