@@ -1,4 +1,4 @@
-@extends('backpack::layout')
+@extends('backpack::layout', ['bodyClass' => 'login-page', 'fullLayout' => true])
 
 <!-- Main Content -->
 @section('content')
